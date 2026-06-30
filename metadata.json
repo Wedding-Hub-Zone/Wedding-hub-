@@ -1,0 +1,6 @@
+{
+  "name": "Royal Wedding Invitation",
+  "description": "A highly premium interactive mobile digital wedding invitation website in matte black and metallic gold, featuring animated timelines, RSVP persistence, and interactive wax-seal unsealing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

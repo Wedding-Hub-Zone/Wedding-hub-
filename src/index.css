@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&family=Great+Vibes&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cinzel", serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-script: "Pinyon Script", cursive;
+  --font-royal-script: "Great Vibes", cursive;
+  
+  --color-gold-light: #f3e5ab;
+  --color-gold-base: #d4af37;
+  --color-gold-dark: #aa7c11;
+  --color-gold-deep: #78510d;
+  
+  --color-palace-cream: #faf5ee;
+  --color-palace-rose: #ebd49d;
+  --color-palace-rose-deep: #b38220;
+  --color-palace-rose-light: #fdfbf7;
+  --color-palace-burgundy: #4d3412;
+}
+
+@layer base {
+  body {
+    background-color: #fdfbf7;
+    color: #4d3412;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom premium scrollbar for elegant guestbook */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+/* Luxury animations and shimmers */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.gold-text-shimmer {
+  background: linear-gradient(90deg, #aa7c11 0%, #f3e5ab 25%, #d4af37 50%, #f3e5ab 75%, #aa7c11 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 6s linear infinite;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
+}
+
+.gold-bg-shimmer {
+  background: linear-gradient(90deg, #78510d 0%, #d4af37 25%, #f3e5ab 50%, #d4af37 75%, #78510d 100%);
+  background-size: 200% auto;
+  animation: shimmer 5s linear infinite;
+}
+
+/* Premium shadows and glow */
+.gold-glow-sm {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+.gold-glow-md {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+}
+.gold-border-glow:focus {
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* Glassmorphism utility card */
+.glass-card {
+  background: rgba(253, 251, 247, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.royal-glass-card {
+  background: rgba(253, 249, 243, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 10px 30px rgba(179, 130, 32, 0.08), inset 0 0 15px rgba(212, 175, 55, 0.05);
+}
+
+.royal-glass-card-dark {
+  background: rgba(89, 60, 24, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(243, 229, 171, 0.35);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Slow spin for decorative icons */
+.animate-spin-slow {
+  animation: spin 15s linear infinite;
+}
+
+/* Moving cloud animations */
+.animate-drift-slow {
+  animation: drift 40s linear infinite;
+}
+
+.animate-drift-reverse {
+  animation: drift-reverse 50s linear infinite;
+}
+
+@keyframes drift {
+  0% { transform: translateX(-15%) translateY(-5%); }
+  50% { transform: translateX(15%) translateY(5%); }
+  100% { transform: translateX(-15%) translateY(-5%); }
+}
+
+@keyframes drift-reverse {
+  0% { transform: translateX(15%) translateY(5%); }
+  50% { transform: translateX(-15%) translateY(-5%); }
+  100% { transform: translateX(15%) translateY(5%); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Apple-level perspective settings */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Premium Night Mode / Velvet Dark Theme Styling Overrides */
+.dark-mode {
+  background-color: #0d0709 !important; /* Premium obsidian base */
+}
+
+.dark-mode #applet-viewport {
+  background-color: #1a0b10 !important; /* Premium Velvet Burgundy-Black */
+  color: #f5e6c4 !important;
+  border-color: rgba(212, 175, 55, 0.4) !important;
+}
+
+/* Override background colors of main container layers */
+.dark-mode .bg-\[\#fdfbf7\],
+.dark-mode .bg-\[\#faf8f5\],
+.dark-mode section.bg-\[\#fdfbf7\],
+.dark-mode div.bg-\[\#fdfbf7\],
+.dark-mode footer.bg-\[\#fdfbf7\] {
+  background-color: #1a0b10 !important;
+  border-color: rgba(212, 175, 55, 0.25) !important;
+}
+
+/* Overriding section margins and white/off-white colors */
+.dark-mode .bg-white,
+.dark-mode .bg-white\/95 {
+  background-color: #241219 !important;
+  color: #fdfbf7 !important;
+}
+
+.dark-mode .border-neutral-100 {
+  border-color: rgba(212, 175, 55, 0.2) !important;
+}
+
+/* Glass card overrides */
+.dark-mode .glass-card,
+.dark-mode .royal-glass-card {
+  background: rgba(26, 11, 16, 0.85) !important;
+  border-color: rgba(212, 175, 55, 0.35) !important;
+  color: #f3e5ab !important;
+}
+
+/* Handle specific text classes */
+.dark-mode .text-\[\#4d3412\],
+.dark-mode .text-\[\#593c18\] {
+  color: #f5e6c4 !important;
+}
+
+.dark-mode .text-\[\#4d3412\]\/80,
+.dark-mode .text-\[\#593c18\]\/80 {
+  color: rgba(245, 230, 196, 0.8) !important;
+}
+
+.dark-mode .text-\[\#4d3412\]\/60,
+.dark-mode .text-\[\#593c18\]\/60 {
+  color: rgba(245, 230, 196, 0.6) !important;
+}
+
+.dark-mode .text-neutral-500,
+.dark-mode .text-neutral-600,
+.dark-mode .text-neutral-700 {
+  color: #bfa88f !important;
+}
+
+.dark-mode .text-neutral-800,
+.dark-mode .text-neutral-900 {
+  color: #f3e5ab !important;
+}
+
+/* Custom form components */
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+  background-color: #221016 !important;
+  color: #f3e5ab !important;
+  border-color: rgba(212, 175, 55, 0.35) !important;
+}
+
+.dark-mode select option {
+  background-color: #1a0b10 !important;
+  color: #f3e5ab !important;
+}
+
+/* Sparkle backdrop opacity adjust */
+.dark-mode .absolute.inset-0.bg-\[\#fdfbf7\] {
+  background-color: #1a0b10 !important;
+}
+
+/* Map overlay */
+.dark-mode #vector-map-overlay {
+  background-color: #221016 !important;
+  border-color: rgba(212, 175, 55, 0.3) !important;
+}
+
+/* Interactive elements */
+.dark-mode button.bg-\[\#ebd49d\]\/10,
+.dark-mode div.bg-\[\#ebd49d\]\/10,
+.dark-mode span.bg-\[\#ebd49d\]\/10 {
+  background-color: rgba(212, 175, 55, 0.15) !important;
+}
